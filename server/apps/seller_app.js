@@ -115,11 +115,18 @@ var checkOrder = function(req, res) {
 		.then(responseClient)
 		.catch(client.fail)
 };
-
+var getCustomer = function(req,res){
+	var client = tool.getResponseFunc(res)
+	var responseClient = function(info){
+		client.success({result:info})
+	}
+	dao.getCustomerInfo().then(responseClient).catch(client.fail)
+}
 module.exports = {
 	login: login,
 	apply: apply,
 	unLogin: unLogin,
 	changePw: changePw,
 	checkOrder: checkOrder,
+	getCustomer
 }

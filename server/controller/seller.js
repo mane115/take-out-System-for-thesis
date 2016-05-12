@@ -18,4 +18,6 @@ router.get("/checkAll", goods.checkAll);
 //order
 router.get('/order/statu/:orderStatu/:orderId', order.changeOrderStatu);
 router.get('/order/:page/:limit', seller.checkOrder);
+//else
+router.get('/customer',seller.getCustomer)
 module.exports = router;

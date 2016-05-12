@@ -1,8 +1,14 @@
 var proxy = tool.getMyModule("models/mongoose_proxy");
 var Seller = proxy.getModel("Seller");
 var Order = proxy.getModel('Order');
+var Customer = proxy.getModel('Customer')
 var dbTool = tool.getMyModule("utils/db");
 
+var getCustomerInfo = function(){
+	return new Promise((success,fail)=>{
+		return Customer.find({}).exec(dbTool.getCallBackForQuery(success,fail))
+	})
+}
 var getAccountInfo = function(accountInformation) {
 	var handleFun = function(success, fail) {
 		console.log('getAccountInfo')
@@ -115,5 +121,6 @@ module.exports = {
 	updatePassword: updatePassword,
 	findOrder: findOrder,
 	checkOrder: checkOrder,
-	changeOrderStatu: changeOrderStatu
+	changeOrderStatu: changeOrderStatu,
+	getCustomerInfo
 }
