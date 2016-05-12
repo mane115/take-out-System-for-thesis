@@ -1,0 +1,33 @@
+{
+
+	"0": "operation success",
+
+	"10001": "validate ticket fail",
+
+	"20001": "user not sign in",
+	"21001": "wrong password ",
+	"21002": "account not founded",
+	"30001": "not in specified area",
+	"30002": "no plans are founded",
+	"30003": "device already used ",
+	"30004": "location exist ",
+	"30005": "delete plan fail ",
+	"30006": "exist records",
+	"30007": "records not exist",
+	"31000": "db error while save",
+	"31001": "db error while query",
+	"31002": "db error while update",
+	"31003": "db error while remove",
+	"31004": "plan not exist",
+	"31005": "goods not exist",
+	"31006": "not enough money",
+	"31007": "not enough goods",
+	"31008": "no order",
+	"31009": "already commit",
+	"32000": "already collect",
+	"40001": "upload image fail",
+	"50001": "account already exist",
+	"50002": "login fail",
+	"99998": "unknow statuCodes",
+	"99999": "unknow server error"
+}
